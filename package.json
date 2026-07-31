@@ -1,0 +1,54 @@
+{
+  "name": "cbr-exchange-rate",
+  "version": "1.0.1",
+  "description": "Official Bank of Russia (Russia) daily exchange rates — ~40 currencies vs RUB, history since 2016. Zero-dependency Node.js/TypeScript client.",
+  "keywords": [
+    "cbr",
+    "bank",
+    "of",
+    "russia",
+    "exchange-rate",
+    "exchange-rates",
+    "currency",
+    "forex",
+    "fx",
+    "rub",
+    "central-bank",
+    "official-rates",
+    "russia",
+    "api",
+    "typescript"
+  ],
+  "homepage": "https://allratestoday.com/central-bank-rates-api/cbr/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllRates-Today/cbr-exchange-rate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AllRates-Today/cbr-exchange-rate/issues"
+  },
+  "license": "MIT",
+  "author": "AllRatesToday <hello@allratestoday.com> (https://allratestoday.com)",
+  "type": "module",
+  "main": "./index.cjs",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    }
+  },
+  "files": [
+    "index.mjs",
+    "index.cjs",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false
+}
