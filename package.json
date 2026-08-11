@@ -1,6 +1,6 @@
 {
   "name": "cbr-exchange-rate",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Official Bank of Russia (Russia) daily exchange rates — 54 currencies vs RUB, history since 2016. Zero-dependency Node.js/TypeScript client.",
   "keywords": [
     "cbr",
