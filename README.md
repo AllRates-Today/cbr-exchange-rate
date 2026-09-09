@@ -70,10 +70,10 @@ const pair = await getRate('USD', 'RUB', { apiKey: 'art_live_...' });
 {
   bank: 'cbr',
   name: 'Bank of Russia',
-  rate_date: '2026-08-11',   // Bank of Russia's own publication date
+  rate_date: '2026-09-09',   // Bank of Russia's own publication date
   source: 'USD',
   target: 'RUB',
-  rate: 82.606,
+  rate: 86.473,
   rate_type: 'reference',
   derived: false,
   method: 'published',
@@ -98,9 +98,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbr',
   name: 'Bank of Russia',
-  rate_date: '2026-08-11',
+  rate_date: '2026-09-09',
   rates: [
-    { "base": "USD", "quote": "RUB", "type": "reference", "value": 82.606 },
+    { "base": "USD", "quote": "RUB", "type": "reference", "value": 86.473 },
     // … the rest of the published table (54 currencies vs RUB)
   ],
   disclaimer: '…'
@@ -140,7 +140,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'cbr-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'RUB', from: '2026-01-01', to: '2026-08-11' },
+  { source: 'USD', target: 'RUB', from: '2026-01-01', to: '2026-09-09' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -153,11 +153,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'RUB',
   from: '2026-01-01',
-  to: '2026-08-11',
+  to: '2026-09-09',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-08-11', rate: 82.606, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-09-09', rate: 86.473, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -170,9 +170,9 @@ Pass `{ symbol: 'USD' }` instead of `source`/`target` to get the raw published r
 
 ## 🗺️ Currencies covered
 
-Bank of Russia currently publishes rates covering **55 currencies** (as of the latest table):
+Bank of Russia currently publishes rates covering **54 currencies** against the RUB (as of the latest table):
 
-`AED` · `AMD` · `AUD` · `AZN` · `BDT` · `BHD` · `BOB` · `BRL` · `BYN` · `CAD` · `CHF` · `CNY` · `CUP` · `CZK` · `DKK` · `DZD` · `EGP` · `ETB` · `EUR` · `GBP` · `GEL` · `HKD` · `HUF` · `IDR` · `INR` · `IRR` · `JPY` · `KGS` · `KRW` · `KZT` · `MDL` · `MMK` · `MNT` · `NGN` · `NOK` · `NZD` · `OMR` · `PLN` · `QAR` · `RON` · `RSD` · `RUB` · `SAR` · `SEK` · `SGD` · `THB` · `TJS` · `TMT` · `TRY` · `UAH` · `USD` · `UZS` · `VND` · `XDR` · `ZAR`
+🇦🇪 `AED` · 🇦🇲 `AMD` · 🇦🇺 `AUD` · 🇦🇿 `AZN` · 🇧🇩 `BDT` · 🇧🇭 `BHD` · 🇧🇴 `BOB` · 🇧🇷 `BRL` · 🇧🇾 `BYN` · 🇨🇦 `CAD` · 🇨🇭 `CHF` · 🇨🇳 `CNY` · 🇨🇺 `CUP` · 🇨🇿 `CZK` · 🇩🇰 `DKK` · 🇩🇿 `DZD` · 🇪🇬 `EGP` · 🇪🇹 `ETB` · 🇪🇺 `EUR` · 🇬🇧 `GBP` · 🇬🇪 `GEL` · 🇭🇰 `HKD` · 🇭🇺 `HUF` · 🇮🇩 `IDR` · 🇮🇳 `INR` · 🇮🇷 `IRR` · 🇯🇵 `JPY` · 🇰🇬 `KGS` · 🇰🇷 `KRW` · 🇰🇿 `KZT` · 🇲🇩 `MDL` · 🇲🇲 `MMK` · 🇲🇳 `MNT` · 🇳🇬 `NGN` · 🇳🇴 `NOK` · 🇳🇿 `NZD` · 🇴🇲 `OMR` · 🇵🇱 `PLN` · 🇶🇦 `QAR` · 🇷🇴 `RON` · 🇷🇸 `RSD` · 🇸🇦 `SAR` · 🇸🇪 `SEK` · 🇸🇬 `SGD` · 🇹🇭 `THB` · 🇹🇯 `TJS` · 🇹🇲 `TMT` · 🇹🇷 `TRY` · 🇺🇦 `UAH` · 🇺🇸 `USD` · 🇺🇿 `UZS` · 🇻🇳 `VND` · `XDR` · 🇿🇦 `ZAR`
 
 ## ⚖️ Published vs derived rates
 
@@ -235,6 +235,14 @@ getRate('USD', 'RUB', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 | `getLatestRates({ apiKey })` | Free | The central bank's full latest published table |
 | `getRatesForDate(date, { apiKey, source?, target? })` | Paid | The official table (or one pair) for a YYYY-MM-DD date |
 | `getHistory({ symbol \| source+target, from?, to? }, { apiKey })` | Paid | Daily series since 2016 |
+
+## 📥 Bulk data (no key)
+
+Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
+
+- Hugging Face: [AllRates/central-bank-exchange-rates](https://huggingface.co/datasets/AllRates/central-bank-exchange-rates) — one CSV per institution (`rates/cbr.csv`)
+- Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
+- CDN JSON: `https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/cbr/latest.json`
 
 ## 🔗 Links
 
