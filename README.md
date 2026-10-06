@@ -85,10 +85,10 @@ const pair = await getRate('USD', 'RUB', { apiKey: 'art_live_...' });
 {
   bank: 'cbr',
   name: 'Bank of Russia',
-  rate_date: '2026-09-25',   // Bank of Russia's own publication date
+  rate_date: '2026-10-03',   // Bank of Russia's own publication date
   source: 'USD',
   target: 'RUB',
-  rate: 84.9057,
+  rate: 83.4839,
   rate_type: 'reference',
   derived: false,
   method: 'published',
@@ -113,9 +113,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbr',
   name: 'Bank of Russia',
-  rate_date: '2026-09-25',
+  rate_date: '2026-10-03',
   rates: [
-    { "base": "USD", "quote": "RUB", "type": "reference", "value": 84.9057 },
+    { "base": "USD", "quote": "RUB", "type": "reference", "value": 83.4839 },
     // … the rest of the published table (54 currencies vs RUB)
   ],
   disclaimer: '…'
@@ -155,7 +155,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'cbr-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'RUB', from: '2026-01-01', to: '2026-09-25' },
+  { source: 'USD', target: 'RUB', from: '2026-01-01', to: '2026-10-03' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -168,11 +168,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'RUB',
   from: '2026-01-01',
-  to: '2026-09-25',
+  to: '2026-10-03',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-09-25', rate: 84.9057, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-10-03', rate: 83.4839, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
