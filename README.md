@@ -4,6 +4,8 @@
 [![license](https://img.shields.io/npm/l/cbr-exchange-rate.svg)](https://github.com/AllRates-Today/cbr-exchange-rate/blob/main/LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://www.npmjs.com/package/cbr-exchange-rate)
 [![TypeScript](https://img.shields.io/badge/TypeScript-types%20included-3178C6.svg)](https://www.typescriptlang.org/)
+[![USD/RUB today](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fcbr%3Fsource%3DUSD%26target%3DRUB&query=%24.rate&label=USD%2FRUB%20published%20by%20Bank%20of%20Russia&color=0A7E8C&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/cbr/)
+[![rate date](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fcbr%3Fsource%3DUSD%26target%3DRUB&query=%24.rate_date&label=rate%20date&color=555&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/cbr/)
 
 **Official Bank of Russia (Russia) daily exchange rates for Node.js and TypeScript. The published central bank rates behind tax filings, customs valuations, audits, and compliant invoicing — not market estimates, but the numbers Bank of Russia itself prints, every business day.**
 
@@ -32,6 +34,72 @@ console.log(r.rate_date, r.rates.length); // the central bank's latest published
 ```
 
 The open endpoint serves the *latest* table only and asks for a visible attribution link. The client below uses the keyed API, which adds point-in-time tables, history, and CSV/XML/Excel output.
+
+## 📈 Latest published table
+
+Today's full Bank of Russia table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
+
+<!-- daily-table:start -->
+Published **2026-10-08** by Bank of Russia — 53 rates. Updated 2026-10-08.
+
+| Base | Quote | Type | Rate |
+| --- | --- | --- | ---: |
+| AED | RUB | reference | 23.276 |
+| AMD | RUB | reference | 0.235927 |
+| AUD | RUB | reference | 59.5803 |
+| AZN | RUB | reference | 50.283 |
+| BDT | RUB | reference | 0.694571 |
+| BHD | RUB | reference | 227.2942 |
+| BOB | RUB | reference | 7.14128 |
+| BRL | RUB | reference | 17.2011 |
+| BYN | RUB | reference | 27.874 |
+| CAD | RUB | reference | 60.0879 |
+| CHF | RUB | reference | 102.5937 |
+| CNY | RUB | reference | 12.7516 |
+| CUP | RUB | reference | 3.57132 |
+| CZK | RUB | reference | 3.91021 |
+| DKK | RUB | reference | 12.8872 |
+| DZD | RUB | reference | 0.635886 |
+| EGP | RUB | reference | 1.63162 |
+| ETB | RUB | reference | 0.530977 |
+| EUR | RUB | reference | 96.3287 |
+| GBP | RUB | reference | 113.5104 |
+| GEL | RUB | reference | 32.8458 |
+| HKD | RUB | reference | 10.89 |
+| HUF | RUB | reference | 0.260995 |
+| IDR | RUB | reference | 0.00477281 |
+| INR | RUB | reference | 0.884687 |
+| JPY | RUB | reference | 0.539449 |
+| KGS | RUB | reference | 0.977502 |
+| KRW | RUB | reference | 0.0636304 |
+| KZT | RUB | reference | 0.18843 |
+| MDL | RUB | reference | 4.79595 |
+| MMK | RUB | reference | 0.0407053 |
+| MNT | RUB | reference | 0.0237738 |
+| NGN | RUB | reference | 0.0642293 |
+| NOK | RUB | reference | 8.93752 |
+| NZD | RUB | reference | 48.019 |
+| OMR | RUB | reference | 222.3176 |
+| PLN | RUB | reference | 21.856 |
+| QAR | RUB | reference | 23.4838 |
+| RON | RUB | reference | 17.8827 |
+| RSD | RUB | reference | 0.817906 |
+| SAR | RUB | reference | 22.795 |
+| SEK | RUB | reference | 8.56826 |
+| SGD | RUB | reference | 66.8395 |
+| THB | RUB | reference | 2.53939 |
+| TJS | RUB | reference | 9.26032 |
+| TMT | RUB | reference | 24.4232 |
+| TRY | RUB | reference | 1.73968 |
+| UAH | RUB | reference | 1.90534 |
+| USD | RUB | reference | 85.4811 |
+| UZS | RUB | reference | 0.00724982 |
+| VND | RUB | reference | 0.00333416 |
+| XDR | RUB | reference | 115.791 |
+| ZAR | RUB | reference | 5.14519 |
+
+Source: [Official rates published by CBR, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/cbr/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
+<!-- daily-table:end -->
 
 ## 🔑 Get your API key
 
