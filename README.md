@@ -47,7 +47,7 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-20 by Bank of Russia — 53 rates. Updated 2026-10-20.</summary>
+<summary>Table as text: published 2026-10-20 by Bank of Russia — 54 rates. Updated 2026-10-20.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
@@ -76,6 +76,7 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 | HUF | RUB | reference | 0.255853 |
 | IDR | RUB | reference | 0.00458954 |
 | INR | RUB | reference | 0.874234 |
+| IRR | RUB | reference | 0.0000455444 |
 | JPY | RUB | reference | 0.524668 |
 | KGS | RUB | reference | 0.947403 |
 | KRW | RUB | reference | 0.0617181 |
