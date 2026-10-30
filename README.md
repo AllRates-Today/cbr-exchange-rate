@@ -24,87 +24,72 @@
 
 Get a free API key at [allratestoday.com/register](https://allratestoday.com/register) — no credit card required. Latest rates are on every plan, including free.
 
-## ⚡ Try it without a key
-
-The latest Bank of Russia table is also served keyless, CORS-open and edge-cached, for evaluation, embeds and AI agents:
-
-```bash
-curl "https://allratestoday.com/api/open/central-bank/cbr?source=USD&target=RUB"
-```
-
-```js
-const r = await fetch('https://allratestoday.com/api/open/central-bank/cbr').then((x) => x.json());
-console.log(r.rate_date, r.rates.length); // the central bank's latest published table, no key
-```
-
-The open endpoint serves the *latest* table only (JSON by default; add `?format=csv`, `xml` or `xlsx` for a file) and is free to use with a visible, followable link where the rates are shown: `<a href="https://allratestoday.com">Exchange rates by AllRatesToday</a>` (terms: <https://allratestoday.com/terms/#attribution>). The client below uses the keyed API, which adds point-in-time tables and history; with a key the link is appreciated, not required.
-
 ## 📈 Latest published table
 
 [![Latest Bank of Russia table](https://allratestoday.com/api/open/central-bank/cbr/table.svg)](https://allratestoday.com/central-bank-rates-api/cbr/)
 
-The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The same table as text is folded below for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
+The image is rendered live from the keyless endpoint, so it follows the central bank's publications on npm and on GitHub alike without a new release. The same table as text is folded below for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-29 by Bank of Russia — 54 rates. Updated 2026-10-29.</summary>
+<summary>Table as text: published 2026-10-30 by Bank of Russia — 54 rates. Updated 2026-10-30.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| AED | RUB | reference | 22.0194 |
-| AMD | RUB | reference | 0.224311 |
-| AUD | RUB | reference | 56.8814 |
-| AZN | RUB | reference | 47.5685 |
-| BDT | RUB | reference | 0.652312 |
-| BHD | RUB | reference | 215.0238 |
-| BOB | RUB | reference | 6.72765 |
-| BRL | RUB | reference | 15.1597 |
-| BYN | RUB | reference | 27.4514 |
-| CAD | RUB | reference | 57.6054 |
-| CHF | RUB | reference | 97.3825 |
-| CNY | RUB | reference | 12.0816 |
-| CUP | RUB | reference | 3.36943 |
-| CZK | RUB | reference | 3.70369 |
-| DKK | RUB | reference | 12.0637 |
-| DZD | RUB | reference | 0.598484 |
-| EGP | RUB | reference | 1.44072 |
-| ETB | RUB | reference | 0.502287 |
-| EUR | RUB | reference | 90.166 |
-| GBP | RUB | reference | 107.6574 |
-| GEL | RUB | reference | 31.1504 |
-| HKD | RUB | reference | 10.3067 |
-| HUF | RUB | reference | 0.245102 |
-| IDR | RUB | reference | 0.00445815 |
-| INR | RUB | reference | 0.849189 |
-| IRR | RUB | reference | 0.0000435747 |
-| JPY | RUB | reference | 0.512331 |
-| KGS | RUB | reference | 0.924731 |
-| KRW | RUB | reference | 0.0610635 |
-| KZT | RUB | reference | 0.177483 |
-| MDL | RUB | reference | 4.46697 |
-| MMK | RUB | reference | 0.0385078 |
-| MNT | RUB | reference | 0.0224706 |
-| NGN | RUB | reference | 0.0597739 |
-| NOK | RUB | reference | 8.67945 |
-| NZD | RUB | reference | 45.3539 |
-| OMR | RUB | reference | 210.3157 |
-| PLN | RUB | reference | 20.4084 |
-| QAR | RUB | reference | 22.216 |
-| RON | RUB | reference | 16.8163 |
-| RSD | RUB | reference | 0.76519 |
-| SAR | RUB | reference | 21.5644 |
-| SEK | RUB | reference | 8.1381 |
-| SGD | RUB | reference | 63.0931 |
-| THB | RUB | reference | 2.39144 |
-| TJS | RUB | reference | 8.77162 |
-| TMT | RUB | reference | 23.1047 |
-| TRY | RUB | reference | 1.62564 |
-| UAH | RUB | reference | 1.77335 |
-| USD | RUB | reference | 80.8664 |
-| UZS | RUB | reference | 0.00678467 |
-| VND | RUB | reference | 0.00315502 |
-| XDR | RUB | reference | 109.3815 |
-| ZAR | RUB | reference | 4.85728 |
+| AED | RUB | reference | 21.9676 |
+| AMD | RUB | reference | 0.223914 |
+| AUD | RUB | reference | 56.9009 |
+| AZN | RUB | reference | 47.4565 |
+| BDT | RUB | reference | 0.649483 |
+| BHD | RUB | reference | 214.5177 |
+| BOB | RUB | reference | 6.65644 |
+| BRL | RUB | reference | 15.1031 |
+| BYN | RUB | reference | 27.3831 |
+| CAD | RUB | reference | 57.478 |
+| CHF | RUB | reference | 97.3526 |
+| CNY | RUB | reference | 12.0844 |
+| CUP | RUB | reference | 3.3615 |
+| CZK | RUB | reference | 3.69498 |
+| DKK | RUB | reference | 12.017 |
+| DZD | RUB | reference | 0.596684 |
+| EGP | RUB | reference | 1.43923 |
+| ETB | RUB | reference | 0.501117 |
+| EUR | RUB | reference | 89.8167 |
+| GBP | RUB | reference | 107.3073 |
+| GEL | RUB | reference | 31.0807 |
+| HKD | RUB | reference | 10.2798 |
+| HUF | RUB | reference | 0.245335 |
+| IDR | RUB | reference | 0.0044369 |
+| INR | RUB | reference | 0.845938 |
+| IRR | RUB | reference | 0.0000433854 |
+| JPY | RUB | reference | 0.510705 |
+| KGS | RUB | reference | 0.922561 |
+| KRW | RUB | reference | 0.0603727 |
+| KZT | RUB | reference | 0.176499 |
+| MDL | RUB | reference | 4.46018 |
+| MMK | RUB | reference | 0.0384172 |
+| MNT | RUB | reference | 0.0224158 |
+| NGN | RUB | reference | 0.0598698 |
+| NOK | RUB | reference | 8.68008 |
+| NZD | RUB | reference | 45.3682 |
+| OMR | RUB | reference | 209.8208 |
+| PLN | RUB | reference | 20.4383 |
+| QAR | RUB | reference | 22.1638 |
+| RON | RUB | reference | 16.8275 |
+| RSD | RUB | reference | 0.764245 |
+| SAR | RUB | reference | 21.5136 |
+| SEK | RUB | reference | 8.12379 |
+| SGD | RUB | reference | 63.0036 |
+| THB | RUB | reference | 2.39054 |
+| TJS | RUB | reference | 8.75259 |
+| TMT | RUB | reference | 23.0503 |
+| TRY | RUB | reference | 1.62181 |
+| UAH | RUB | reference | 1.76951 |
+| USD | RUB | reference | 80.6761 |
+| UZS | RUB | reference | 0.00672076 |
+| VND | RUB | reference | 0.003146 |
+| XDR | RUB | reference | 109.0563 |
+| ZAR | RUB | reference | 4.84789 |
 
 </details>
 
